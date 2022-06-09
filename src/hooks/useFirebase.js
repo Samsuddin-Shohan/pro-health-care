@@ -3,64 +3,65 @@ import {
   getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
-} from 'firebase/auth'
-import { useEffect, useState } from 'react'
-import firebaseInitialization from '../firebase/firebase.int'
+} from 'firebase/auth';
+import { useEffect, useState } from 'react';
+import firebaseInitialization from '../firebase/firebase.int';
 
-firebaseInitialization()
+firebaseInitialization();
 const useFirebase = () => {
-  const [user, setUser] = useState({})
-  const [error, setError] = useState('')
-  const auth = getAuth()
-  const googleProvider = new GoogleAuthProvider()
-  const googleSignIn = (auth, googleProvider) => {
-    return signInWithPopup(auth, googleProvider)
-  }
+  const [user, setUser] = useState({});
+  const [error, setError] = useState('');
+  const auth = getAuth();
+  const googleProvider = new GoogleAuthProvider();
+  const googleSignIn = () => {
+    return signInWithPopup(auth, googleProvider);
+  };
   const createUser = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log(userCredential, 'user created')
+        console.log(userCredential, 'user created');
       })
       .catch((error) => {
-        setError(error.message)
-      })
-  }
+        setError(error.message);
+      });
+  };
   const emailSignIn = (email, password) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        setUser(userCredential.user)
-
-        // ...
+        setUser(userCredential.user);
       })
       .catch((error) => {
-        setError(error.message)
-      })
-  }
+        setError(error.message);
+      });
+  };
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        setUser(user)
+        setUser(user);
       } else {
-        setUser({})
+        setUser({});
       }
-    })
-  }, [])
+    });
+  }, []);
   const logOut = () => {
     signOut(auth)
       .then(() => {
-        setUser({})
+        setUser({});
       })
       .catch((error) => {
-        setError(error)
-      })
-  }
+        setError(error);
+      });
+  };
   return {
     user,
     error,
     logOut,
     googleSignIn,
-  }
-}
-export default useFirebase
+    emailSignIn,
+    createUser,
+  };
+};
+export default useFirebase;
