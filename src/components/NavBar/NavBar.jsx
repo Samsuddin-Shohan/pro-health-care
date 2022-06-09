@@ -8,7 +8,7 @@ const NavBar = () => {
     return (
         <Navbar bg="light" variant="light">
         <Container>
-        <Link className='logo' to="/">Navbar</Link>
+        <Link className='logo' to="/">Pro Health Care</Link>
         <Nav className="me-auto">
           <Link to="/" className='link' >Home</Link>
           <Link to="/doctors" className='link'>Doctors</Link>
