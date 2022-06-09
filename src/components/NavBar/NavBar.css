@@ -1,25 +1,28 @@
-.link{
-    color: rgb(41, 38, 38);
-    font-weight: bold;
-    text-decoration: none;
-    margin: 1rem .3rem;
-    padding: .3rem .6rem;
-    border-radius: .5 rem;
+.navbar {
+  background-color: rgb(5, 5, 197);
 }
-.link:hover{
-    background-color: rgb(0, 53, 53);
-    color: white;
-
+.link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 1rem 0.3rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5 rem;
 }
-.logo{
-    font-weight: bolder;
-    font-size: larger;
-    font-family: cursive;
-    font-size: 24px;
-    color: teal;
-    text-decoration: none;
-    margin: 0 1rem;
+.link:hover {
+  background-color: white;
+  color: black;
 }
-.logo:hover{
-    color: teal;
+.logo {
+  font-weight: bolder;
+  font-size: larger;
+  font-family: cursive;
+  font-size: 24px;
+  color: rgb(214, 224, 224);
+  text-decoration: none;
+  margin: 0 1rem;
+}
+.logo:hover {
+  color: white;
+  color: black;
 }
