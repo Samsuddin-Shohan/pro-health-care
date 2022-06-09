@@ -1,11 +1,13 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import './App.css'
-import AuthProvider from './context/AuthProvider'
-import Branches from './pages/Branches/Branches'
-import Doctors from './pages/Doctors/Doctors'
-import Home from './pages/Home/Home'
-import Login from './pages/Login/Login'
-import Registraion from './pages/Registration/Registraion'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './App.css';
+import AppointmentForm from './components/AppointmentForm/AppointmentForm';
+import ServiceForm from './components/ServiceForm/ServiceForm';
+import AuthProvider from './context/AuthProvider';
+import Branches from './pages/Branches/Branches';
+import Doctors from './pages/Doctors/Doctors';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import Registraion from './pages/Registration/Registraion';
 
 function App() {
   return (
@@ -30,10 +32,16 @@ function App() {
           <Route path={`/register`}>
             <Registraion></Registraion>
           </Route>
+          <Route path={`/crateservice`}>
+            <ServiceForm></ServiceForm>
+          </Route>
+          <Route path={`/createappointment`}>
+            <AppointmentForm></AppointmentForm>
+          </Route>
         </Switch>
       </Router>
     </AuthProvider>
-  )
+  );
 }
 
-export default App
+export default App;

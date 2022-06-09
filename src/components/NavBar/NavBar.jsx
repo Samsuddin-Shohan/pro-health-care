@@ -13,6 +13,9 @@ const NavBar = () => {
           <Link to="/" className='link' >Home</Link>
           <Link to="/doctors" className='link'>Doctors</Link>
           <Link to="/branches" className='link' >Branch</Link>
+          <Link to="/crateservice" className='link' >Create Service</Link>
+          <Link to="/createappointment" className='link' >Appointment</Link>
+
 
         </Nav>
         <Nav className='ms-auto'>

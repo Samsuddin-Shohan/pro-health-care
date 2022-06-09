@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgb(5, 5, 197);
+  background-color: #0f4c75;
 }
 .link {
   color: white;
@@ -10,7 +10,7 @@
   border-radius: 0.5 rem;
 }
 .link:hover {
-  background-color: white;
+  background-color: #bbe1fa;
   color: black;
 }
 .logo {
@@ -18,11 +18,10 @@
   font-size: larger;
   font-family: cursive;
   font-size: 24px;
-  color: rgb(214, 224, 224);
+  color: white;
   text-decoration: none;
   margin: 0 1rem;
 }
 .logo:hover {
   color: white;
-  color: black;
 }
