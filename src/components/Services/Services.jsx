@@ -13,8 +13,8 @@ const Services = () => {
   }, [])
   return (
 
-    <div className='container '>
-      <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 3 }}>
+    <div className='container my-5'>
+      <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 3 }} >
         {
           services.map(service => <Service key={service._id} service={service}></Service>)
         }

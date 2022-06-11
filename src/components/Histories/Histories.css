@@ -1,0 +1,18 @@
+.histories {
+  background-color: #bbe1fa;
+  color: #1b262c;
+}
+.history-welcome {
+  color: #ff9a00;
+  font-size: 22px;
+  font-weight: bold;
+}
+.history-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+.history-count {
+  font-size: 35px;
+  font-weight: bold;
+  color: #ff9a00;
+}

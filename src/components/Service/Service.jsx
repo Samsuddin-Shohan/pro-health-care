@@ -4,10 +4,10 @@ import './Service.css';
 
 const Service = ({ service }) => {
   return (
-    <CCol xs>
+    <CCol xs className='d-flex align-items-stretch  justify-content-center'>
 
       <CCard style={{ width: '18rem' }}>
-        <CCardImage orientation="top" src={service.image} />
+        <CCardImage orientation="top" src={service.image} className="card-image" />
         <CCardBody>
           <CCardTitle>{service.title}</CCardTitle>
           <CCardText>

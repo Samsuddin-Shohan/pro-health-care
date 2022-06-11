@@ -6,22 +6,27 @@ import './NavBar.css';
 const NavBar = () => {
 
   return (
-    <Navbar className='navbar' variant="light">
+    <Navbar collapseOnSelect expand="lg" className='navbar'>
       <Container>
+
+
         <Link className='logo' to="/">Pro Health Care</Link>
-        <Nav className="me-auto">
-          <Link to="/" className='link' >Home</Link>
-          <Link to="/doctors" className='link'>Doctors</Link>
-          <Link to="/branches" className='link' >Branch</Link>
-          <Link to="/crateservice" className='link' >Create Service</Link>
-          <Link to="/createappointment" className='link' >Appointment</Link>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
 
 
-        </Nav>
-        <Nav className='ms-auto'>
-          <Link to="/login" className='link' >Login</Link>
-          <Link to="/register" className='link' >Registration</Link>
-        </Nav>
+          <Nav className="ms-auto">
+            <Link to="/" className='link' >Home</Link>
+            <Link to="/doctors" className='link'>Doctors</Link>
+            <Link to="/branches" className='link' >Branch</Link>
+            <Link to="/crateservice" className='link' >Create Service</Link>
+            <Link to="/createappointment" className='link' >Appointment</Link>
+            <Link to="/login" className='link' >Login</Link>
+            <Link to="/register" className='link' >Registration</Link>
+          </Nav>
+        </Navbar.Collapse>
+
+
 
       </Container>
     </Navbar>

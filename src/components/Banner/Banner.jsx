@@ -11,22 +11,22 @@ const Banner = () => {
       <CCarouselItem>
         <CImage className="d-block w-100 banner" src={banner1} alt="slide 1" />
         <CCarouselCaption className="d-none d-md-block">
-          <h3>Welcome to Pro Health Care</h3>
-          <p>We are always here for you</p>
+          <h3 class="animate-charcter"> Pro Health Care</h3>
+          <p className='animate-p'>We are always here for you</p>
         </CCarouselCaption>
       </CCarouselItem>
       <CCarouselItem>
         <CImage className="d-block w-100 banner" src={banner2} alt="slide 2" />
         <CCarouselCaption className="d-none d-md-block">
-          <h3>Welcome to Pro Health Care</h3>
-          <p>We are always here for you</p>
+          <h3 class="animate-charcter"> Pro Health Care</h3>
+          <p className='animate-p'>We are always here for you</p>
         </CCarouselCaption>
       </CCarouselItem>
       <CCarouselItem>
         <CImage className="d-block w-100 banner" src={banner3} alt="slide 3" />
         <CCarouselCaption className="d-none d-md-block">
-          <h3>Welcome to Pro Health Care</h3>
-          <p>We are always here for you</p>
+          <h3 class="animate-charcter"> Pro Health Care</h3>
+          <p className='animate-p'>We are always here for you</p>
         </CCarouselCaption>
       </CCarouselItem>
     </CCarousel>
