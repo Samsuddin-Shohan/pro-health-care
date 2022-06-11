@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
 import Footer from '../Footer/Footer';
 import NavBar from '../NavBar/NavBar';
+import './AppointmentForm.css';
+
 
 const AppointmentForm = () => {
   return (
@@ -9,7 +11,7 @@ const AppointmentForm = () => {
       <NavBar></NavBar>
       <Card className='w-50 mx-auto my-5'>
         <Card.Body>
-          <Form >
+          <Form className='my-5' >
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Name</Form.Label>
               <Form.Control type="text" placeholder="Your Name" name="name" />
@@ -25,7 +27,7 @@ const AppointmentForm = () => {
               <Form.Control type="text" placeholder="Your Cell No" name='cell' />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button className='sub-button' type="submit">
               Submit
             </Button>
           </Form>

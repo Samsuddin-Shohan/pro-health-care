@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <div className='bg-dark text-light  row' id='footer' >
+    <div className='footer text-light  row' id='footer' >
       <div className='col-6 ps-5 d-flex flex-column justify-content-between'>
         <p className='logo'>Pro Health Care</p>
         <p>Copyright @ 2020 Online food </p>

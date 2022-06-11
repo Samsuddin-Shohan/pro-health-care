@@ -1,31 +1,57 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 import { Button, Card, Form } from 'react-bootstrap';
 import Footer from '../Footer/Footer';
 import NavBar from '../NavBar/NavBar';
+import './ServiceForm.css';
 
 const ServiceForm = () => {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [image, setImage] = useState('');
+  console.log(title, description, image);
+  const handleCreateService = (e) => {
+
+    axios.post('http://localhost:7000/services', {
+      title,
+      description,
+      image
+    })
+      .then(res => console.log('res'))
+  }
+  const handleTitle = (e) => {
+    setTitle(e.target.value);
+
+  }
+  const handleDescription = (e) => {
+    setDescription(e.target.value);
+  }
+  const handleImage = (e) => {
+    setImage(e.target.value);
+  }
+
   return (
     <div>
       <NavBar></NavBar>
       <Card className='w-50 mx-auto my-5'>
         <Card.Body>
-          <Form >
+          <Form className='my-5' onSubmit={handleCreateService}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Title</Form.Label>
-              <Form.Control type="text" placeholder="Enter Title" name="title" />
+              <Form.Control type="text" onChange={handleTitle} placeholder="Enter Title" name="title" />
 
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Description</Form.Label>
-              <Form.Control type="textarea" placeholder="Description" name='description' />
+              <Form.Control type="textarea" onChange={handleDescription} placeholder="Description" name='description' />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Image Url</Form.Label>
-              <Form.Control type="text" placeholder="Image URL" name='image' />
+              <Form.Control type="text" onChange={handleImage} placeholder="Image URL" name='image' />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button className='sub-button' type="submit">
               Submit
             </Button>
           </Form>
