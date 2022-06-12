@@ -17,10 +17,11 @@ const NavBar = () => {
 
           <Nav className="ms-auto">
             <Link to="/" className='link' >Home</Link>
-            <Link to="/doctors" className='link'>Doctors</Link>
-            <Link to="/branches" className='link' >Branch</Link>
+            <Link to="/createappointment" className='link' >Make Appointment</Link>
+            <Link to="/appointmentlist" className='link' > Appointment List</Link>
+
             <Link to="/crateservice" className='link' >Create Service</Link>
-            <Link to="/createappointment" className='link' >Appointment</Link>
+
             <Link to="/login" className='link' >Login</Link>
             <Link to="/register" className='link' >Registration</Link>
           </Nav>

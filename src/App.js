@@ -3,8 +3,7 @@ import './App.css';
 import AppointmentForm from './components/AppointmentForm/AppointmentForm';
 import ServiceForm from './components/ServiceForm/ServiceForm';
 import AuthProvider from './context/AuthProvider';
-import Branches from './pages/Branches/Branches';
-import Doctors from './pages/Doctors/Doctors';
+import AppointmentList from './pages/AppointmentList/AppointmentList';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Registraion from './pages/Registration/Registraion';
@@ -20,12 +19,7 @@ function App() {
           <Route path={`/home`}>
             <Home></Home>
           </Route>
-          <Route path={`/doctors`}>
-            <Doctors></Doctors>
-          </Route>
-          <Route path={`/branches`}>
-            <Branches></Branches>
-          </Route>
+
           <Route path={`/login`}>
             <Login></Login>
           </Route>
@@ -37,6 +31,9 @@ function App() {
           </Route>
           <Route path={`/createappointment`}>
             <AppointmentForm></AppointmentForm>
+          </Route>
+          <Route path={`/appointmentlist`}>
+            <AppointmentList></AppointmentList>
           </Route>
         </Switch>
       </Router>
