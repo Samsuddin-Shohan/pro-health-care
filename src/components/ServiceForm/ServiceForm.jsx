@@ -38,17 +38,17 @@ const ServiceForm = () => {
           <Form className='my-5' onSubmit={handleCreateService}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Title</Form.Label>
-              <Form.Control type="text" onChange={handleTitle} placeholder="Enter Title" name="title" />
+              <Form.Control required type="text" onChange={handleTitle} placeholder="Enter Title" name="title" />
 
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Description</Form.Label>
-              <Form.Control type="textarea" onChange={handleDescription} placeholder="Description" name='description' />
+              <Form.Control required type="textarea" onChange={handleDescription} placeholder="Description" name='description' />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Image Url</Form.Label>
-              <Form.Control type="text" onChange={handleImage} placeholder="Image URL" name='image' />
+              <Form.Control required type="text" onChange={handleImage} placeholder="Image URL" name='image' />
             </Form.Group>
 
             <Button className='sub-button' type="submit">

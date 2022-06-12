@@ -22,10 +22,7 @@ const AppointmentForm = () => {
       .then(res => console.log(res))
       .then(() => {
         alert('Your appointment is submitted');
-        setName('');
-        setEmail('');
-        setCell('');
-        setProblem('');
+        e.target.reset();
       })
   }
   return (
@@ -36,21 +33,21 @@ const AppointmentForm = () => {
           <Form className='my-5' onSubmit={handleSubmitAppointment} >
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Name</Form.Label>
-              <Form.Control onChange={(e) => setName(e.target.value)} type="text" placeholder="Your Name" name="name" />
+              <Form.Control required onChange={(e) => setName(e.target.value)} type="text" placeholder="Your Name" name="name" />
 
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Email</Form.Label>
-              <Form.Control onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Your Email" name='email' />
+              <Form.Control required onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Your Email" name='email' />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Cell No:</Form.Label>
-              <Form.Control onChange={(e) => setCell(e.target.value)} type="text" placeholder="Your Cell No" name='cell' />
+              <Form.Control required onChange={(e) => setCell(e.target.value)} type="text" placeholder="Your Cell No" name='cell' />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Describe Your Problem</Form.Label>
-              <Form.Control onChange={(e) => setProblem(e.target.value)} type="text" placeholder="Problem" name='problem' />
+              <Form.Control required onChange={(e) => setProblem(e.target.value)} type="text" placeholder="Problem" name='problem' />
             </Form.Group>
 
             <Button className='sub-button' type="submit">
