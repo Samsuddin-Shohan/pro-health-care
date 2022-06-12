@@ -28,6 +28,8 @@ const AppointmentForm = () => {
   return (
     <div>
       <NavBar></NavBar>
+      <h1 className='my-3 text-center' style={{ color: "#1B2430" }}>Please Fill this information</h1>
+
       <Card className='w-50 mx-auto my-5'>
         <Card.Body>
           <Form className='my-5' onSubmit={handleSubmitAppointment} >

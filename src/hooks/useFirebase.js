@@ -19,14 +19,9 @@ const useFirebase = () => {
   const googleSignIn = () => {
     return signInWithPopup(auth, googleProvider);
   };
-  const createUser = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential, 'user created');
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+
+  const createUser = (email, password, auth) => {
+    return createUserWithEmailAndPassword(auth, email, password);
   };
   const emailSignIn = (email, password) => {
     signInWithEmailAndPassword(auth, email, password)

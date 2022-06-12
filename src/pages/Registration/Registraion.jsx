@@ -1,13 +1,37 @@
+import axios from 'axios';
+import { getAuth } from 'firebase/auth';
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import Footer from '../../components/Footer/Footer';
 import NavBar from '../../components/NavBar/NavBar';
 
 const Registraion = () => {
+    const auth = getAuth();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const handleRegistration = (e) => {
+        e.preventDefault();
+        e.target.reset();
+
+
+        if (password != confirmPassword) {
+            alert('please type your password correctly')
+
+        }
+        else {
+            axios.post('http://localhost:7000/users', {
+                name,
+                email,
+                password
+            })
+                .then(res => console.log(res))
+            alert('Your registraion is completed successfully')
+        }
+
+    }
+
     return (
         <div>
             <NavBar></NavBar>
@@ -15,6 +39,8 @@ const Registraion = () => {
                 <Form
                     className=" d-flex flex-column  align-items-center"
                     id="login-form"
+                    onSubmit={handleRegistration}
+
                 >
 
                     <input
@@ -70,19 +96,12 @@ const Registraion = () => {
                     <button
                         id="form-element"
                         className="btn btn-primary"
-
+                        type='submit'
                     >
                         Sign Up
                     </button>
-                    <p className="fs-2">or</p>
 
-                    <button
-                        id="login-link"
-                        className="btn btn-outline-primary mb-4 "
 
-                    >
-                        Google Sign In
-                    </button>
                 </Form>
             </div>
             <Footer></Footer>
