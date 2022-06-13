@@ -13,6 +13,7 @@ const Registraion = () => {
     const [password, setPassword] = useState('');
     const history = useHistory();
     const [confirmPassword, setConfirmPassword] = useState('');
+    console.log('hello');
     const handleRegistration = (e) => {
         e.preventDefault();
         e.target.reset();
