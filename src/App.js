@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AppointmentForm from './components/AppointmentForm/AppointmentForm';
+import DoctorsForm from './components/DoctorsForm/DoctorsForm';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import ServiceForm from './components/ServiceForm/ServiceForm';
 import AuthProvider from './context/AuthProvider';
 import AppointmentList from './pages/AppointmentList/AppointmentList';
@@ -29,9 +31,13 @@ function App() {
           <Route path={`/crateservice`}>
             <ServiceForm></ServiceForm>
           </Route>
-          <Route path={`/createappointment`}>
-            <AppointmentForm></AppointmentForm>
+          <Route path={`/cratedoctors`}>
+            <DoctorsForm></DoctorsForm>
           </Route>
+
+          <PrivateRoute path={`/createappointment`}>
+            <AppointmentForm></AppointmentForm>
+          </PrivateRoute>
           <Route path={`/appointmentlist`}>
             <AppointmentList></AppointmentList>
           </Route>

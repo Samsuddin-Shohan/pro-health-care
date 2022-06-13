@@ -36,6 +36,9 @@ const NavBar = () => {
             {
               user?.name === 'admin' && <Link to="/crateservice" className='link' >Create Service</Link>
             }
+            {
+              user?.name === 'admin' && <Link to="/cratedoctors" className='link' >Create Doctors</Link>
+            }
 
             {user.name ? (
               <p className='username'>{user.name}</p>

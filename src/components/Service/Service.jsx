@@ -1,8 +1,10 @@
 import { CButton, CCard, CCardBody, CCardFooter, CCardImage, CCardText, CCardTitle, CCol } from '@coreui/react';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import './Service.css';
 
 const Service = ({ service }) => {
+  const history = useHistory();
   return (
     <CCol xs className='d-flex align-items-stretch  justify-content-center'>
 
@@ -16,7 +18,7 @@ const Service = ({ service }) => {
 
         </CCardBody>
         <CCardFooter>
-          <CButton className='sub-button'>Make Appointment</CButton>
+          <CButton onClick={() => history.push('/createappointment')} className='sub-button'>Make Appointment</CButton>
         </CCardFooter>
       </CCard>
     </CCol>

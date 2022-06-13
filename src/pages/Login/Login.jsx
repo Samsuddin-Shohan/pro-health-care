@@ -16,6 +16,7 @@ const Login = () => {
         e.preventDefault();
         emailSignIn(email, password)
         console.log(user);
+        history.push('/')
     }
     const handleGoogleSignIn = () => {
         googleSignIn().then(result => {
@@ -37,9 +38,9 @@ const Login = () => {
 
 
                     <button id='form-element' className='btn btn-primary' type='submit' >Log In</button>
-                    <p className='fs-2'>or</p>
+                    {/* <p className='fs-2'>or</p> */}
 
-                    <button id='login-link' className='btn ' onClick={handleGoogleSignIn} >Google Sign In</button>
+                    {/* <button id='login-link' className='btn ' onClick={handleGoogleSignIn} >Google Sign In</button> */}
 
 
                 </Form>

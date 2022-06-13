@@ -14,6 +14,7 @@ const Services = () => {
   return (
 
     <div className='container my-5'>
+      <h1 className='text-center fw-bold mb-3'>Services</h1>
       <CRow xs={{ cols: 1, gutter: 4 }} md={{ cols: 3 }} >
         {
           services.map(service => <Service key={service._id} service={service}></Service>)
