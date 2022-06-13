@@ -1,9 +1,8 @@
+import axios from 'axios';
 import {
-  createUserWithEmailAndPassword,
   getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
-  signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
 } from 'firebase/auth';
@@ -20,17 +19,11 @@ const useFirebase = () => {
     return signInWithPopup(auth, googleProvider);
   };
 
-  const createUser = (email, password, auth) => {
-    return createUserWithEmailAndPassword(auth, email, password);
-  };
   const emailSignIn = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        setUser(userCredential.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    axios
+      .get(`http://localhost:7000/user/${email}`)
+      .then((res) => setUser(res.data))
+      .catch((e) => console.log(e));
   };
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -56,7 +49,6 @@ const useFirebase = () => {
     logOut,
     googleSignIn,
     emailSignIn,
-    createUser,
   };
 };
 export default useFirebase;

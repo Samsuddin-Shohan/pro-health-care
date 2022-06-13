@@ -2,6 +2,7 @@ import axios from 'axios';
 import { getAuth } from 'firebase/auth';
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
 import NavBar from '../../components/NavBar/NavBar';
 
@@ -10,6 +11,7 @@ const Registraion = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const history = useHistory();
     const [confirmPassword, setConfirmPassword] = useState('');
     const handleRegistration = (e) => {
         e.preventDefault();
@@ -27,7 +29,9 @@ const Registraion = () => {
                 password
             })
                 .then(res => console.log(res))
-            alert('Your registraion is completed successfully')
+            alert('Your registraion is completed successfully');
+            history.push('/login');
+
         }
 
     }
@@ -36,12 +40,14 @@ const Registraion = () => {
         <div>
             <NavBar></NavBar>
             <div id="login">
+
                 <Form
                     className=" d-flex flex-column  align-items-center"
                     id="login-form"
                     onSubmit={handleRegistration}
 
                 >
+                    <h1 className='text-white text-center fw-bolder'>Please Register</h1>
 
                     <input
                         onFocus={(e) => (e.target.placeholder = "")}

@@ -1,0 +1,29 @@
+[debug] [2022-06-12T16:01:16.239Z] ----------------------------------------------------------------------
+[debug] [2022-06-12T16:01:16.241Z] Command:       /home/sohan/.nvm/versions/node/v16.15.0/bin/node /home/sohan/.nvm/versions/node/v16.15.0/bin/firebase deploy
+[debug] [2022-06-12T16:01:16.241Z] CLI Version:   11.0.1
+[debug] [2022-06-12T16:01:16.241Z] Platform:      linux
+[debug] [2022-06-12T16:01:16.242Z] Node Version:  v16.15.0
+[debug] [2022-06-12T16:01:16.246Z] Time:          Sun Jun 12 2022 22:01:16 GMT+0600 (Bangladesh Standard Time)
+[debug] [2022-06-12T16:01:16.246Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-12T16:01:16.249Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-06-12T16:01:16.308Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-12T16:01:16.308Z] > authorizing via signed-in user (shohankhan682014@gmail.com)
+[debug] [2022-06-12T16:01:16.308Z] [iam] checking project pro-health-care-2f98d for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-06-12T16:01:16.309Z] > refreshing access token with scopes: []
+[debug] [2022-06-12T16:01:16.309Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-06-12T16:01:23.170Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-06-12T16:01:23.170Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-06-12T16:01:38.612Z] <<< HTTP RESPONSE 200 {"date":"Sun, 12 Jun 2022 16:01:38 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-06-12T16:01:38.619Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/pro-health-care-2f98d:testIamPermissions [none]
+[debug] [2022-06-12T16:01:38.619Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pro-health-care-2f98d:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-12T16:01:41.132Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/pro-health-care-2f98d:testIamPermissions 200
+[debug] [2022-06-12T16:01:41.133Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/pro-health-care-2f98d:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-12T16:01:41.135Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pro-health-care-2f98d [none]
+[debug] [2022-06-12T16:02:11.163Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/pro-health-care-2f98d
+[debug] [2022-06-12T16:02:28.748Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/pro-health-care-2f98d
+    at RetryOperation._fn (/home/sohan/.nvm/versions/node/v16.15.0/lib/node_modules/firebase-tools/lib/apiv2.js:240:31)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project pro-health-care-2f98d. Please make sure the project exists and your account has permission to access it.

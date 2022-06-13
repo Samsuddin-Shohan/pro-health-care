@@ -26,3 +26,11 @@
 .logo:hover {
   color: white;
 }
+.username {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 1rem 0.3rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5 rem;
+}
