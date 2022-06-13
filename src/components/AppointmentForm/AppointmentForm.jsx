@@ -13,7 +13,7 @@ const AppointmentForm = () => {
   const [problem, setProblem] = useState('');
   const handleSubmitAppointment = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:7000/appointments', {
+    axios.post('https://powerful-reef-73334.herokuapp.com/appointments', {
       name,
       email,
       cell,

@@ -12,7 +12,7 @@ const ServiceForm = () => {
   console.log(title, description, image);
   const handleCreateService = (e) => {
 
-    axios.post('http://localhost:7000/services', {
+    axios.post('https://powerful-reef-73334.herokuapp.com/services', {
       title,
       description,
       image

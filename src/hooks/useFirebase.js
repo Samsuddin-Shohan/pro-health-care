@@ -21,7 +21,7 @@ const useFirebase = () => {
 
   const emailSignIn = (email, password) => {
     axios
-      .get(`http://localhost:7000/user/${email}`)
+      .get(`https://powerful-reef-73334.herokuapp.com/user/${email}`)
       .then((res) => setUser(res.data))
       .catch((e) => console.log(e));
   };

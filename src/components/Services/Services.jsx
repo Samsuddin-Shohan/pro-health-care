@@ -7,7 +7,7 @@ import './Services.css';
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:7000/services')
+    axios.get('https://powerful-reef-73334.herokuapp.com/services')
       .then(res => setServices(res.data))
       .catch(e => console.log(e))
   }, [])

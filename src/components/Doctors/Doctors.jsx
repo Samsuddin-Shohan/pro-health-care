@@ -6,7 +6,7 @@ import Doctor from '../Doctor/Doctor';
 const Doctors = () => {
   const [doctors, setDoctors] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:7000/doctors')
+    axios.get('https://powerful-reef-73334.herokuapp.com/doctors')
       .then(res => setDoctors(res.data))
       .catch(e => console.log(e))
   }, [])

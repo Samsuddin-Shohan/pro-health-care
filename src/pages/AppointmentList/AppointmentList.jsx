@@ -8,7 +8,7 @@ import SingleAppointment from '../../components/singleAppointment/SingleAppointm
 const AppointmentList = () => {
   const [appointments, setApponintments] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:7000/appointments')
+    axios.get('https://powerful-reef-73334.herokuapp.com/appointments')
       .then(res => setApponintments(res.data))
   }, [])
   return (

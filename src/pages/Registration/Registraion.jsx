@@ -23,7 +23,7 @@ const Registraion = () => {
 
         }
         else {
-            axios.post('http://localhost:7000/users', {
+            axios.post('https://powerful-reef-73334.herokuapp.com/users', {
                 name,
                 email,
                 password

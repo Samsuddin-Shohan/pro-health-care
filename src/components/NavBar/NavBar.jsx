@@ -40,12 +40,12 @@ const NavBar = () => {
               user?.name === 'admin' && <Link to="/cratedoctors" className='link' >Create Doctors</Link>
             }
 
-            {user.name ? (
+            {user?.name ? (
               <p className='username'>{user.name}</p>
             ) : (
               <Link to="/register" className='link' >Registration</Link>
             )}
-            {user.name ? (
+            {user?.name ? (
               <Button className='link' onClick={handleLogout}>Logout</Button>
             ) : (
               <Link to="/login" className='link' >Login</Link>

@@ -12,7 +12,7 @@ const DoctorsForm = () => {
   const [image, setImage] = useState('');
   const handleSubmitDoctor = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:7000/doctors', {
+    axios.post('https://powerful-reef-73334.herokuapp.com/doctors', {
       name,
       title,
       image,
