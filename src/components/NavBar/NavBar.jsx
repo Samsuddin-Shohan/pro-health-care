@@ -31,6 +31,9 @@ const NavBar = () => {
               user?.name != 'admin' && <Link to="/createappointment" className='link' >Make Appointment</Link>
             }
             {
+              user?.name != 'admin' && <Link to="/myappointments" className='link' >My Appointments</Link>
+            }
+            {
               user?.name === 'admin' && <Link to="/appointmentlist" className='link' > Appointment List</Link>
             }
             {

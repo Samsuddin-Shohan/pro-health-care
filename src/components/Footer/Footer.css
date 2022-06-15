@@ -9,6 +9,8 @@
   padding-top: 3rem;
   padding-bottom: 2rem;
   margin: 0px;
+  margin-bottom: 0px;
+  min-height: calc(100vh - 200px);
 }
 .logo {
   font-weight: bolder;

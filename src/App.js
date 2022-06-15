@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import AppointmentForm from './components/AppointmentForm/AppointmentForm';
 import DoctorsForm from './components/DoctorsForm/DoctorsForm';
+import MyAppointemts from './components/MyAppointments/MyAppointemts';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import ServiceForm from './components/ServiceForm/ServiceForm';
 import AuthProvider from './context/AuthProvider';
@@ -37,6 +38,9 @@ function App() {
 
           <PrivateRoute path={`/createappointment`}>
             <AppointmentForm></AppointmentForm>
+          </PrivateRoute>
+          <PrivateRoute path={`/myappointments`}>
+            <MyAppointemts></MyAppointemts>
           </PrivateRoute>
           <Route path={`/appointmentlist`}>
             <AppointmentList></AppointmentList>
