@@ -25,12 +25,17 @@ const AppointmentList = () => {
               <th>Email</th>
               <th>Cell</th>
               <th>Problem</th>
+              <th>Status</th>
+
             </tr>
           </thead>
           <tbody>
 
             {
-              appointments.map(appointment => <SingleAppointment key={appointment._id} appointment={appointment}></SingleAppointment>)
+              appointments.map(appointment => <SingleAppointment key={appointment._id} appointment={appointment}>
+
+
+              </SingleAppointment>)
             }
 
           </tbody>

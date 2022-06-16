@@ -11,13 +11,16 @@ const AppointmentForm = () => {
   const [email, setEmail] = useState('');
   const [cell, setCell] = useState('');
   const [problem, setProblem] = useState('');
+  const [status, setStatus] = useState('Pending');
   const handleSubmitAppointment = (e) => {
     e.preventDefault();
     axios.post('https://powerful-reef-73334.herokuapp.com/appointments', {
       name,
       email,
       cell,
-      problem
+      problem,
+      status
+
     })
       .then(res => console.log(res))
       .then(() => {
