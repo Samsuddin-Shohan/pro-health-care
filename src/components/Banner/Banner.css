@@ -1,10 +1,13 @@
-.banner {
+.img {
   width: 100%;
   background-position: center;
   background-size: cover;
   height: 75vh;
   background-color: #bbe1fa;
   color: #1b262c;
+}
+.owl-dots {
+  display: none;
 }
 
 .animate-charcter {
