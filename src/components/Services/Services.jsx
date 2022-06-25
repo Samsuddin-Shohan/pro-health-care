@@ -6,6 +6,14 @@ import Service from '../Service/Service';
 import './Services.css';
 
 const Services = () => {
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    speed: 500
+  };
   const [services, setServices] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
