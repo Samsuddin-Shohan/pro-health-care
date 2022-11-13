@@ -48,7 +48,7 @@ const AppointmentForm = () => {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Cell No:</Form.Label>
-              <Form.Control required onChange={(e) => setCell(e.target.value)} type="text" placeholder="Your Cell No" name='cell' />
+              <Form.Control required onChange={(e) => setCell(e.target.value)} type="number" placeholder="Your Cell No" name='cell' />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Describe Your Problem</Form.Label>

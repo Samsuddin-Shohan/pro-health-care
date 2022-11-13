@@ -60,6 +60,7 @@ const Registraion = () => {
                         type="text"
                         name=""
                         placeholder="Name"
+                        required
                     />
                     <input
 
@@ -69,9 +70,10 @@ const Registraion = () => {
 
 
                         id="form-element"
-                        type="text"
+                        type="email"
                         name=""
                         placeholder="Email"
+                        required
                     />
 
                     <input
