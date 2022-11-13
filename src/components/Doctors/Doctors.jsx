@@ -16,6 +16,7 @@ const Doctors = () => {
       })
       .catch(e => console.log(e))
   }, [])
+  console.log(doctors);
   return (
     <div className='container my-5'>
       {isLoading ? <Loadingspinner></Loadingspinner> : <div> <h1 className='mb-3 text-center fw-bold'>Doctors</h1>

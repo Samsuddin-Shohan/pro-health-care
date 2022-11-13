@@ -13,11 +13,22 @@ const Registraion = () => {
     const [password, setPassword] = useState('');
     const history = useHistory();
     const [confirmPassword, setConfirmPassword] = useState('');
+    let strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
     console.log('hello');
+    // useEffect(() => {
+
+    // }, [password])
     const handleRegistration = (e) => {
         e.preventDefault();
         e.target.reset();
+        let reg = strongRegex.test(password)
+        if (reg) {
 
+        }
+        else {
+            alert('Strong Password needed');
+            return;
+        }
 
         if (password != confirmPassword) {
             alert('please type your password correctly')
@@ -69,7 +80,7 @@ const Registraion = () => {
 
 
                         id="form-element"
-                        type="text"
+                        type="email"
                         name=""
                         placeholder="Email"
                     />

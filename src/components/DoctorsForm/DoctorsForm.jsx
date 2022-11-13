@@ -10,13 +10,15 @@ const DoctorsForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDesctiption] = useState('');
   const [image, setImage] = useState('');
+  const [time, setTime] = useState('');
   const handleSubmitDoctor = (e) => {
     e.preventDefault();
     axios.post('https://powerful-reef-73334.herokuapp.com/doctors', {
       name,
       title,
       image,
-      description
+      description,
+
     })
       .then(res => console.log(res))
       .then(() => {
@@ -46,6 +48,7 @@ const DoctorsForm = () => {
               <Form.Label>Description</Form.Label>
               <Form.Control required onChange={(e) => setDesctiption(e.target.value)} type="text" placeholder="Description" name='cell' />
             </Form.Group>
+
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Image URL</Form.Label>
               <Form.Control required onChange={(e) => setImage(e.target.value)} type="text" placeholder="Image URL" name='problem' />

@@ -17,6 +17,7 @@ const Doctor = ({ doctor }) => {
         </CCardBody>
         <CCardFooter>
           <CButton className='submits-button'>{doctor.title}</CButton>
+          {/* <CButton>{doctor.time}</CButton> */}
         </CCardFooter>
       </CCard>
     </CCol>
