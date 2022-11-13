@@ -32,7 +32,7 @@ const Login = () => {
 
                 <Form className=' d-flex flex-column  align-items-center' onSubmit={handleLogin} id='login-form'>
                     <h1 className='text-white text-center fw-bolder'>Please Login</h1>
-                    <input onChange={(e) => setEmail(e.target.value)} onFocus={(e) => e.target.placeholder = ""} onBlur={(e) => e.target.placeholder = 'Name'} id='form-element' type="text" name="" placeholder='Email' />
+                    <input onChange={(e) => setEmail(e.target.value)} onFocus={(e) => e.target.placeholder = ""} onBlur={(e) => e.target.placeholder = 'Name'} id='form-element' type="email" name="" placeholder='Email' />
 
                     <input onChange={(e) => setPassword(e.target.value)} onBlur={(e) => e.target.placeholder = 'Password'} onFocus={(e) => e.target.placeholder = ""} id='form-element' type="password" name="" placeholder='Password' />
 

@@ -6,7 +6,7 @@ const Footer = () => {
     <div className='footer text-light  row' id='footer' >
       <div className='col-6 ps-5 d-flex flex-column justify-content-between'>
         <p className='logo'>Pro Health Care</p>
-        <p>Copyright @ 2020 Online food </p>
+        <p>Copyright @ Pro Health Care </p>
       </div>
       <div className='col-3 lh-1'>
         <p>About Hospital</p>
